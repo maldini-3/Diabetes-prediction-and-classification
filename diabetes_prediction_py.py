@@ -8,16 +8,14 @@ Original file is located at
 """
 
 
-
 import streamlit as st
-from importlib import import_module
-import import_ipynb
+from nbimporter import NotebookLoader
+
+# Import the notebook containing the prediction function
+with NotebookLoader():
+    from diabetes_prediction_model import predict_diabetes
 
 def main():
-    st.title("Diabetes Risk Prediction App")
-
-    # Import the notebook containing the prediction function
-    diabetes_prediction_model = import_module('diabetes_prediction_model')
     st.title("Diabetes Risk Prediction App")
 
     # Collect user input
@@ -31,7 +29,7 @@ def main():
     # Button to trigger prediction
     if st.button("Predict"):
         # Call your prediction function
-        prediction =pipe.predict(age, hypertension, heart_disease, bmi, hba1c_level, blood_glucose_level)
+        prediction = predict_diabetes(age, hypertension, heart_disease, bmi, hba1c_level, blood_glucose_level)
 
         # Display prediction
         st.write("Prediction:", prediction)
