@@ -1,7 +1,6 @@
 # Diabetes-prediction-and-classification
 A machine learning model using random forest with test accuracy 97% 
 
-
 Overview
 Diabetes is a chronic condition that affects millions of people worldwide. Early detection and intervention can significantly improve the management of diabetes and reduce its complications. This project aims to develop a predictive model that can identify individuals at risk of diabetes based on various health parameters.
 
