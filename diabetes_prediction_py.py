@@ -7,6 +7,7 @@ Original file is located at
     https://colab.research.google.com/drive/11VzadbXbx2F3JZ55OtSEchlWNelQF8fw
 """
 
+pip install import-ipynb
 
 import streamlit as st
 from importlib import import_module
